@@ -190,7 +190,7 @@ def LSTMbasedAD(data, timesteps = 2, wout = 21, win = 11):
     return result_mat, result_count, final_result[tin:H+tin,tin:W+tin]
 
 
-mat_c = sio.loadmat('aviris150.mat')
+mat_c = sio.loadmat('pavia.mat')
 data = mat_c['data']
 gtruth = mat_c['groundtruth']
 
@@ -205,4 +205,5 @@ plt.show()
 
 plt.imshow(gtruth, cmap='hot', interpolation='nearest')
 plt.show()
+
 
